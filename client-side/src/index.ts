@@ -1,3 +1,2 @@
-let num: number = 123
-
-document.title = 'lison'
+// import './example/basic-type.ts'
+import './example/symbol.ts'
