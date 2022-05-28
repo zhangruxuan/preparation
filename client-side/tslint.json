@@ -1,0 +1,17 @@
+{
+    "defaultSeverity": "error",
+    "extends": [
+        "tslint:recommended"
+    ],
+    "jsRules": {},
+    "rules": {
+        "quotemark": [false],
+        "semicolon": [false],
+        /* 接口不用加I前缀 */
+        "interface-name": [true, "never-prefix"],
+        //属性顺序不必按首字母排序
+        "object-literal-sort-keys": [false]
+
+    },
+    "rulesDirectory": []
+}
