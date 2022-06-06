@@ -10,7 +10,11 @@
         /* 接口不用加I前缀 */
         "interface-name": [true, "never-prefix"],
         //属性顺序不必按首字母排序
-        "object-literal-sort-keys": [false]
+        "object-literal-sort-keys": [false],
+        // 解除一个ts文件中只能有一个class的限制
+        "max-classes-per-file": [false],
+        //构造函数可空
+        "no-empty": [false]
 
     },
     "rulesDirectory": []
