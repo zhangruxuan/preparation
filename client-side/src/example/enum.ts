@@ -45,3 +45,23 @@ const dog: Dog = {
 }
 
 // 联合枚举类型
+
+enum Status2 {
+    Off,
+    On,
+}
+interface Light {
+    status: Status2
+}
+const light: Light = {
+    // 值只能是Status.Off或者Status.On
+    status: Status2.Off
+}
+
+// 运行时枚举类型
+const enum Animals3 {
+
+}
+// 用const enum定义
+// Status.Success编译完会直接是200
+// res.code === Status.Success

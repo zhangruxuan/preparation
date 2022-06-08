@@ -35,13 +35,13 @@
 
 // 类装饰器 当做函数被调用 唯一参数是装饰的类
 let sign = null
-function setName3(name:string) {
-    return (target: new() => any) => {
-        sign = target
-        console.log(target.name)
-    }
-}
-@setName3('mitty')
-class ClassDec {
-    constructor() {}
-}
+// function setName3(name:string) {
+//     return (target: new() => any) => {
+//         sign = target
+//         console.log(target.name)
+//     }
+// }
+// @setName3('mitty')
+// class ClassDec {
+//     constructor() {}
+// }
