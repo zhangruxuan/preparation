@@ -1,17 +1,17 @@
-//用来表示独一无二的值
+// 用来表示独一无二的值
 
 const s1 = Symbol()
 const s2 = Symbol()
 // console.log(s1 === s2)  false
 
-//用字符串做标识 但标识一样的也不能三等 symbol是独一无二的
+// 用字符串做标识 但标识一样的也不能三等 symbol是独一无二的
 const s3 = Symbol('mitty')
 
-//参数只能是字符串 数字 undefined 
-//在浏览器直接写会把对象转成字符串再传 [object object]
+// 参数只能是字符串 数字 undefined 
+// 在浏览器直接写会把对象转成字符串再传 [object object]
 // const s4 = Symbol({a: 'a'}) 
 
-//输出字符串Symbol(mitty) 但变量本身还是symbol
+// 输出字符串Symbol(mitty) 但变量本身还是symbol
 console.log(s3.toString())
 
 let prop = 'name'
@@ -24,32 +24,32 @@ const info = {
 }
 // console.log(info)
 // console.log(info.name)
-//普通字符串作为标识时访问
+// 普通字符串作为标识时访问
 info.name
 info['name']
-//symbol作为属性名时访问
+// symbol作为属性名时访问
 info[s5]
 
 
-//遍历
-//返回所有属性名构成的数组 但不包含symbol属性名
+// 遍历
+// 返回所有属性名构成的数组 但不包含symbol属性名
 for(const key in info){
     //打印属性名
     console.log(key)
 
 }
-//返回所有属性名构成的数组 但不包含symbol属性名 数组
+// 返回所有属性名构成的数组 但不包含symbol属性名 数组
 console.log(Object.keys(info))
 Object.getOwnPropertyNames(info)
 JSON.stringify(info)
-//返回所有symbol属性名 数组
+// 返回所有symbol属性名 数组
 Object.getOwnPropertySymbols(info)
-//返回所有属性名 包含Symbol  数组
+// 返回所有属性名 包含Symbol  数组
 Reflect.ownKeys(info)
 
 
-//静态方法
-//创建之前在全局内找有无相同symbol 有的话直接赋值 没有再新创建
+// 静态方法
+// 创建之前在全局内找有无相同symbol 有的话直接赋值 没有再新创建
 //全局包含当前页面、ifram/serficrwork
 const s7 = Symbol('mitty')
 const s6 = Symbol.for('mitty')
@@ -73,11 +73,11 @@ console.log({a:'a'} instanceof <any>obj1)
 //2. concat时不会被扁平化
 Symbol.isConcatSpreadable
 let arr5 = [1,2]
-console.log([].concat(arr5,[3,4,5]))
-arr5[Symbol.isConcatSpreadable] = false //未设置时是unde
-console.log([].concat(arr5,[3,4,5]))
+// console.log([].concat(arr5,[3,4,5]))
+// arr5[Symbol.isConcatSpreadable] = false //未设置时是unde
+// console.log([].concat(arr5,[3,4,5]))
 
-//3. 
+// 3.
 // Symbol.species
 // class C extends Array {
 // static get [Symbol.species]() {

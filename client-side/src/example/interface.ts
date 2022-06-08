@@ -100,15 +100,15 @@ interface Counter {
     (): void,
     count: number
 }
-const getCounter = (): Counter => {
-    const c = () => {c.count++}
-    c.count = 0
-    return c
-}
-const counter: Counter = getCounter()
-counter()
-console.log(counter.count)
-counter()
-console.log(counter.count)
-counter()
-console.log(counter.count)
+// const getCounter = (): Counter => {
+//     const c = () => {c.count++}
+//     c.count = 0
+//     // return c
+// }
+// const counter: Counter = getCounter()
+// counter()
+// console.log(counter.count)
+// counter()
+// console.log(counter.count)
+// counter()
+// console.log(counter.count)
